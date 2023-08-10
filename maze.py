@@ -33,3 +33,15 @@ class Maze:
     def move_bwd(self):
         self.position -= self.orientation
         movements.bwd() #command to actually move the micromouse
+
+    def block_north(self):
+        self.maze[self.position.real - 1][self.position.imag - 1].block_north()
+
+    def block_south(self):
+        self.maze[self.position.real - 1][self.position.imag - 1].block_south()
+
+    def block_east(self):
+        self.maze[self.position.real - 1][self.position.imag - 1].block_east()
+
+    def block_west(self):
+        self.maze[self.position.real - 1][self.position.imag - 1].block_west()
